@@ -1,38 +1,69 @@
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form {
+  width: 40%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.inputBox {
+  min-height: 200px;
+  width: 100%;
+  background-color: rgb(216, 216, 216);
+  border: solid 1px rgb(175, 175, 175);
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+
+.inputBox::placeholder {
+  padding: 10px;
+}
+
+.submitButton {
+  height: 35px;
+  width: 20%;
+  background-color: #00adfe;
+  border: solid 1px #00adfe;
+  border-radius: 30px;
   color: white;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.solutionBox {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 50px;
+  border-top: solid 2px rgb(216, 216, 216);
+  border-bottom: solid 2px rgb(216, 216, 216);
+}
+.analyzeItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title {
+  font-size: 15px;
+}
+
+.analyzeText {
+  color: #00adfe;
+  font-size: 15px;
+  font-weight: 900;
 }

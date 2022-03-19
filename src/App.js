@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./App.css";
 
 const App = () => {
@@ -12,8 +12,8 @@ const App = () => {
   const [median, setMedian] = useState(0);
 
   const reading_per_sec = 4.25; //calculated with 255 per min
-
-
+  const mid = [];
+  const nums = [];
 
   const handleEmailChange = (event) => {
     setText(event.target.value);
@@ -32,13 +32,25 @@ const App = () => {
           ""
         )
     );
-    setAverageCounter(letterCounter / wordCounter);
+    setAverageCounter(
+      text.replace(/\s/g, "").length / text.trim().split(" ").length
+    );
     setReadingTimeCounter(Math.ceil(wordCounter / reading_per_sec));
-  
+    setMedian(
+      text
+        .split(" ")
+        .sort((a, b) => a.length - b.length)
+        .Math.floor(text.length / 2) %
+        2 !==
+        0
+        ? nums[mid]
+        : (nums[mid - 1] + nums[mid]) / 2
+    );
   };
   return (
     <div className="App">
       <div className="container">
+        <h3 className="main-title"> Word Analyzer</h3>
         <form className="form" onSubmit={handleSubmit}>
           <label>
             <textarea

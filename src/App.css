@@ -4,33 +4,32 @@
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  width: 650px;
+  align-items: center;
+  padding: 50px 0 50px 0;
+}
+.form {
   width: 100%;
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  margin-top: 30px;
-  align-items: center;
-}
-
-.form {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  display: flex;
   justify-content: center;
 }
 
-.inputBox {
+.main-title {
+  color: #00adfe;
+  font-size: 20px;
+  font-weight: 900;
+}
+.input-box {
   min-height: 200px;
   width: 100%;
   background-color: rgb(216, 216, 216);
   border: solid 1px rgb(175, 175, 175);
   border-radius: 30px;
   margin-bottom: 20px;
-}
-
-.inputBox::placeholder {
-  padding: 10px;
+  padding: 16px 0 0 16px;
 }
 
 .submitButton {
@@ -43,16 +42,16 @@
   font-weight: bold;
 }
 
-.solutionBox {
-  width: 40%;
+.solution-box {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 50px;
+  margin: 50px 0 50px 0;
   border-top: solid 2px rgb(216, 216, 216);
   border-bottom: solid 2px rgb(216, 216, 216);
 }
-.analyzeItem {
+.analyze-item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -62,14 +61,15 @@
   font-size: 15px;
 }
 
-.analyzeText {
+.analyze-text {
   color: #00adfe;
   font-size: 15px;
   font-weight: 900;
 }
 
-.main-title {
-  color: #00adfe;
-  font-size: 20px;
-  font-weight: 900;
+.frequency {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
+	
